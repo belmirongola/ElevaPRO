@@ -1,0 +1,69 @@
+@charset "utf8";
+/*@font-face {
+    font-family: Dosis;
+    src: url(../fonts/dosis/Dosis-Book.ttf);
+}
+@font-face {
+    font-family: Dosis;
+    src: url(../fonts/dosis/Dosis-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Dosis;
+    src: url(../fonts/dosis/Dosis-ExtraBold.ttf);
+    font-weight: bolder;
+}
+@font-face {
+    font-family: Dosis;
+    src: url(../fonts/dosis/Dosis-ExtraLight.ttf);
+    font-weight: lighter;
+}*/
+:root {
+    --app-font-weight: normal;
+    --app-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --app-font-size: .9rem;
+    --app-light-theme: #fff;
+    --app-dark-theme: #151515;
+    --app-link-color: rgb(0, 68, 255);
+    --app-full-color: #09f;
+    --app-link-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --app-text-font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    --app-text-font-size: 1.1rem;
+    --app-icon-color: #0085CA;
+    --app-color: #00bbff;
+    --app-light-color: #00bbff;
+    --app-light-opacited-color: #00bbff4f;
+    --app-outher-color: #0089ff;
+    --app-full-background: cover center no-repeat scroll #fff;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: white;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical, 
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: var(--app-light-opacited-color);
+    border-radius: 10px;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-up {
+    animation: linear fade-up 2s;
+    opacity: 1;
+}

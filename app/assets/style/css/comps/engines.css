@@ -1,0 +1,92 @@
+.engines {
+	display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.engines .engine-bar {
+	grid-row: 1;
+    grid-column: 1;
+    max-width: 500px;
+
+    border-right: thin solid #f2f2f2;
+    overflow: auto;
+
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.engines .engine-bar .engine-tabs {
+    width: 100%;
+}
+
+.engines .engine-bar .engine-tabs ul {
+	list-style: none;
+    padding: 1.5%;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    border-radius: 13px;
+
+    border: thin solid #f2f2f2;
+
+}
+
+.engines .engine-bar .engine-tabs ul li {
+	width: 40%;
+    height: 3.3rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding-top: 2%;
+}
+
+.engines .engine-bar .engine-tabs #selected {
+	color: black;
+	background-color: #f1f1f1;
+}
+
+/*******************************************/
+
+.engines .engine-dashboard {
+	grid-row: 1;
+    grid-column: 2;
+    overflow: auto;
+}
+
+/************************************************/
+.engines .imageEngine {
+	display: flex;
+    flex-direction: column;
+}
+
+.engines .imageEngine label {
+	font-size: 12pt;
+	margin-top: 7%;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: grey;
+}
+
+.engines .imageEngine textarea {
+	height: 170px;
+	width: 100%;
+	border-radius: 10px;
+	border: thin solid #f2f2f2;
+	outline: none;
+	padding: 3%;
+	box-shadow: 0 0 20px #f2f2f2;
+}
+
+.engines .imageEngine button {
+	border: none;
+	padding: 3%;
+	font-size: 12pt;
+	border-radius: 3px;
+}

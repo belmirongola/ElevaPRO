@@ -1,0 +1,49 @@
+{
+  "name": "elevapro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --trace-deprecation ./app.js",
+    "server": "node ./server.js",
+    "server:dev": "nodemon app.js",
+    "dev": "webpack --mode development --config webpack.server.config.js && webpack --mode development",
+    "build": "webpack --mode development --stats-error-details --stats-children --config webpack.config.js",
+    "build:dev": "webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.config.js",
+    "build:prod": "webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "npm run build && npm run start",
+    "app:dev": "npm run build:dev && npm run server"
+  },
+  "author": "Belmiro Ngola",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "@flaticon/flaticon-uicons": "^3.0.0",
+    "@material-ui/core": "^4.12.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "css-loader": "^6.8.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "history": "^5.3.0",
+    "html-webpack-plugin": "^5.5.4",
+    "json5": "^2.2.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
+    "react-router-dom": "^6.21.0",
+    "redux": "^5.0.0",
+    "require": "^0.4.4",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2",
+    "webpack": "^5.89.0",
+    "webpack-dev-middleware": "^6.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "babel-loader": "^9.1.3"
+  }
+}
