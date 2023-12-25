@@ -1,13 +1,11 @@
 'use strict';
 
-import React, { Component,  useState } from 'react'
-import { render } from 'react-dom'
+import React, { Component } from 'react'
 import { createBrowserHistory as history} from 'history'
-import { Routes, 
-         Route, 
-         BrowserRouter as Router} from 'react-router-dom'
+
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
-import * as io from 'socket.io-client'
+//import * as io from 'socket.io-client'
 import store from '../assets/scripts/redux/store'
 
 import '../assets/style/css/all.css'
@@ -16,38 +14,20 @@ import '../assets/style/css/bootstrap.css';
 import '../assets/style/css/app.css'
 import '../assets/style/css/comps/menu.css'
 
-import Layout from './components/Layout.jsx'
-import Auth from './components/handler/auth.jsx'
-import Home from './components/pages/Home.jsx'
-import Engines from './engines/Engines.jsx'
-import ImagesEngine from './engines/Images.jsx'
-import TextEngeine from './engines/Text.jsx'
-import DocsEngine from './engines/Docs.jsx'
+//import AppRoutes from '../means/router';
+import Layout from './components/Layout.jsx';
 
-const root = document.getElementById('root');
+const root = createRoot(document.getElementById('root'));
 
 class App extends Component {
     render () {
         return (
-        <Router history={history}>
-            <Routes>
-                <Route element={<Layout/>}>
-                    <Route path='/' element={<Engines/>}></Route>
-                    <Route element={<Engines/>}>
-                        <Route path='apps' element={<ImagesEngine/>}></Route>
-                        <Route path='text' element={<TextEngeine/>}></Route>
-                        <Route path='docs' element={<DocsEngine/>}></Route>
-                    </Route>
-                </Route>
-            </Routes>
-        </Router>
-        )
-    }
+            <React.StrictMode>
+                <Provider store={store}> 
+                    <Layout />
+                </Provider>
+            </React.StrictMode>
+    )}
 }
 
-render(
-    <React.StrictMode>
-        <Provider store={store}> 
-            <App/> 
-        </Provider>
-    </React.StrictMode>, root);
+root.render( <App/> );

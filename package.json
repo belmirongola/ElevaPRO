@@ -19,8 +19,12 @@
   "license": "MIT",
   "dependencies": {
     "@babel/preset-react": "^7.23.3",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@flaticon/flaticon-uicons": "^3.0.0",
     "@material-ui/core": "^4.12.3",
+    "@mui/icons-material": "^5.15.2",
+    "@mui/material": "^5.15.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "css-loader": "^6.8.1",
@@ -38,6 +42,7 @@
     "require": "^0.4.4",
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
+    "url": "^0.11.3",
     "webpack": "^5.89.0",
     "webpack-dev-middleware": "^6.1.1"
   },

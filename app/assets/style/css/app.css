@@ -36,3 +36,34 @@ body,
     color: currentColor;
     text-decoration: none;
 }
+
+.app2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #000133;
+    width: 100%;
+  }
+  
+  .app2 .header,
+  .app2 .footer {
+    background: #00022e;
+    height: 50px;
+    color: #fc86aa;
+  }
+  
+  .app2 .container {
+    display: flex;
+    flex: 1;
+  }
+  
+  .app2 .drawer {
+    background: #d8dcd6;
+    width: 240px;
+  }
+  
+  .app2 .main {
+    flex: 1;
+    background: #f7f5f5;
+  }
