@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import { Outlet } from "react-router-dom"
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+
 
 import Header from './header/Header.jsx';
 
@@ -28,16 +30,18 @@ class LayoutTest extends Component {
 
     render () {
         return (
-        <div className="app2">
-            <div className="header">Header</div>
-            <div className="container">
-                <aside className="drawer">Drawer</aside>
-                <main className="main">Content</main>
-            </div>
-            <div className="footer">Footer</div>
-        </div>
+            <Sidebar>
+                <Menu>
+                <SubMenu label="Charts">
+                    <MenuItem> Pie charts </MenuItem>
+                    <MenuItem> Line charts </MenuItem>
+                </SubMenu>
+                <MenuItem> Documentation </MenuItem>
+                <MenuItem> Calendar </MenuItem>
+                </Menu>
+          </Sidebar>
         )
     }
 }
 
-export default Layout;
+export default LayoutTest;
