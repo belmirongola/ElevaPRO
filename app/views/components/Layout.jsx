@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import { Outlet } from "react-router-dom"
 
-import Header from './header/Header.jsx';
+import Sidebar from './menu/Sidebar.jsx'
+import Section from './pages/SectionBar.jsx';
 
 class Layout extends Component {
     constructor (props) {
@@ -11,55 +12,19 @@ class Layout extends Component {
     }
     render () {
         return (
-            <article id="app">
-                <Header/>
-                <section>
-                    <Outlet/>
-                </section>
-            </article>
+        <article 
+            className="dashboard"
+            style={{
+                display: 'flex',
+                height: '100%',
+                minHeight: '400px'
+            }}>
+            
+            <Sidebar />
+            <Section />
+        </article>
         );
     }
 }
 
-class LayoutTest extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render () {
-        return (
-            <Dashboard />
-        )
-    }
-}
-
-const Sidebar = () => {
-  return (
-    <div className="sidebar">
-      {/* Sidebar content goes here */}
-      Sidebar
-      <p>Sidebar</p>
-    </div>
-  );
-};
-
-const Content = () => {
-  return (
-    <div className="content">
-      {/* Content goes here */}
-      Content
-    
-    </div>
-  );
-};
-
-const Dashboard = () => {
-  return (
-    <div className="dashboard">
-      <Sidebar />
-      <Content />
-    </div>
-  );
-};
-
-export default LayoutTest;
+export default Layout;

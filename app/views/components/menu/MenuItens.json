@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "CRM",
+    "icon": "home-icon",
+    "link": "/crm"
+  },
+  {
+    "id": 2,
+    "title": "Aplicações",
+    "icon": "profile-icon",
+    "link": "/apps"
+  },
+  {
+    "id": 3,
+    "title": "Gestão",
+    "icon": "settings-icon",
+    "link": "/gestão"
+  },
+  {
+    "id": 4,
+    "title": "Estratégia",
+    "icon": "settings-icon",
+    "link": "/strategy"
+  }
+]
