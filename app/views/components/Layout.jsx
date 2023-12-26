@@ -1,7 +1,5 @@
 import React, { Component } from "react"
 import { Outlet } from "react-router-dom"
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-
 
 import Header from './header/Header.jsx';
 
@@ -30,18 +28,38 @@ class LayoutTest extends Component {
 
     render () {
         return (
-            <Sidebar>
-                <Menu>
-                <SubMenu label="Charts">
-                    <MenuItem> Pie charts </MenuItem>
-                    <MenuItem> Line charts </MenuItem>
-                </SubMenu>
-                <MenuItem> Documentation </MenuItem>
-                <MenuItem> Calendar </MenuItem>
-                </Menu>
-          </Sidebar>
+            <Dashboard />
         )
     }
 }
+
+const Sidebar = () => {
+  return (
+    <div className="sidebar">
+      {/* Sidebar content goes here */}
+      Sidebar
+      <p>Sidebar</p>
+    </div>
+  );
+};
+
+const Content = () => {
+  return (
+    <div className="content">
+      {/* Content goes here */}
+      Content
+    
+    </div>
+  );
+};
+
+const Dashboard = () => {
+  return (
+    <div className="dashboard">
+      <Sidebar />
+      <Content />
+    </div>
+  );
+};
 
 export default LayoutTest;
