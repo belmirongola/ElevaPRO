@@ -9,9 +9,9 @@ import { Sidebar,
 		} from 'react-pro-sidebar'
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react'
-import Typography from '../default/Typography'
-import SidebarHeader from './SidebarHeader'
-import SidebarFooter from './SidebarFooter'
+import Typography from '../default/Typography.jsx'
+import SidebarHeader from './SidebarHeader.jsx'
+import SidebarFooter from './SidebarFooter.jsx'
 import Badge from './Badge'
 
 import Items from './MenuItens.json'
