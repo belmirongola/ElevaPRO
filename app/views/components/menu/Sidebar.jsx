@@ -129,29 +129,6 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 							Calendar
 						</MenuItem>
 					</Menu>
-				
-					<Menu 
-						menuItemStyles={{
-							button: {
-								[`&.active`]: {
-									backgroundColor: '#13395e',
-									color: '#b6c8d9'
-								},
-							},
-						}}
-					>
-						{Items.map((item) => (
-							<MenuItem
-								key={item.id}
-								icon={
-									<Icon />
-								}
-								//component={ <Link to={item.link}/> }
-							> 
-							{item.title} 
-							</MenuItem>
-						))}
-					</Menu>
 				</div>
 
 				<SidebarFooter collapsed={collapsed}/>

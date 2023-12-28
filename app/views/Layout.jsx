@@ -45,6 +45,7 @@ class Layout extends Component {
 
             <Section 
                 set={this.setCollapsed} 
+                o={this.collapsed}
                 children={ <Outlet/> }/>
         </article>
         );
