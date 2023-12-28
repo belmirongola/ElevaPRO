@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { Typography } from '../default/Typography.jsx';
-import Typography from '../default/Typography.jsx'
-
 
 const StyledButton = styled.a`
   padding: 5px 16px;
