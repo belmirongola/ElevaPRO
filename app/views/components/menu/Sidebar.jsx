@@ -1,10 +1,10 @@
-import React, 
-	 { useState } from 'react';
-import { Sidebar, Menu, MenuItem, sidebarClasses } from 'react-pro-sidebar';
-import { Link } from 'react-router-dom';
-import { Icon } from '@iconify/react';
+import React, { useState } from 'react'
+import { Sidebar, Menu, MenuItem, 
+		 sidebarClasses } from 'react-pro-sidebar'
+import { Link } from 'react-router-dom'
+import { Icon } from '@iconify/react'
 
-import Items from './MenuItens.json';
+import Items from './MenuItens.json'
 
 function SidebarElement ({ collapsed, setCollapsed }) {
 	return (
