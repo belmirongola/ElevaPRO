@@ -7,7 +7,7 @@ export default function SectionBar ({ set, children }) {
 			<Switch 
 				id="collapsed"
 				checked={true}
-				onchange={set}
+				onChange={set}
 				label={"Collapse"}
 			/>			
 			{children}
