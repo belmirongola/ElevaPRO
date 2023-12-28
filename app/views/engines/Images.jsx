@@ -1,78 +1,62 @@
-import React, { useState, Component } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateData } from '../../assets/scripts/redux/actions';
 import EngineTabs from './EngineTabs.jsx';
 
-class ImageEngine extends Component {
-    constructor (props) {
-        super(props);
+const ImageEngine = () => {
+    const [show, setShow] = useState(false);
+    const [prompt, setPrompt] = useState('Insira o seu prompt aqui');
+    const dispatch = useDispatch();
 
-        const data = useSelector((state) => state.data);
-        const dispach = useDispach();
+    const changeState = () => {
+        setShow(!show);
+    };
 
-        this.state = {
-            show: false,
-            prompt: ''
-        }
-
-        this.onChange = this.onChange.bind(this);
-    }
-
-    changeState = () => {
-        this.setState({
-            show: !this.state.show 
-        });
-    }
-
-    onChange = (e) => {
-        this.setState({
-            prompt: e.target.value
-        })
+    const onChange = (e) => {
+        setPrompt(e.target.value);
         dispatch(updateData(e.target.value));
-    }
+    };
 
-    handleUpdateDate = (e) => {
+    const handleUpdateDate = (e) => {
         dispatch(updateData(e.target.value));
-    }
+    };
 
-    render () {
-        return (
-            <div className='imageEngine'>
-                <div className='prompt'>
-                    <label for='prpt'>Prompt</label>
+    return (
+        <div className='imageEngine'>
+            <div className='prompt'>
+                <label htmlFor='prpt'>Prompt</label>
 
-                    <textarea 
-                        id='prpt'
-                        defaultValue={'Insira o seu prompt aqui'}
-                        value={this.state.name}
-                        onChange={this.onChange}>
-                    </textarea>
+                <textarea
+                    id='prpt'
+                    value={prompt}
+                    onChange={onChange}>
+                </textarea>
 
-                    <button
-                        disabled={this.state.show}
-                        onClick={this.changeState}>
-                        Gerar Imagens
-                    </button>
-                </div>
+                <button
+                    disabled={show}
+                    onClick={changeState}>
+                    Gerar Imagens
+                </button>
             </div>
-        )
-    }
-}
+        </div>
+    );
+};
 
 const App = () => {
     const data = useSelector((state) => state.data);
-
+    console.log(data)
     return (
-    <>
-        <div className='engine-bar'>
-            <EngineTabs current='picture' />
-            <ImageEngine />
-        </div>
+        <>
+            <div className='engine-bar'>
+                <EngineTabs current='picture' />
+                <ImageEngine />
+            </div>
 
-        <div className='engine-dashboard'>
-            Dashboard {data}
-        </div>
-    </>
-        )
-}
+            <div className='engine-dashboard'>
+                Dashboard -> {data.data}
+            </div>
+        </>
+    );
+};
+
 export default App;

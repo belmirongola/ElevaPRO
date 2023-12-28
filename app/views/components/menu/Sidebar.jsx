@@ -1,14 +1,12 @@
 import React, 
 	 { useState } from 'react';
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import { Sidebar, Menu, MenuItem, sidebarClasses } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 import Items from './MenuItens.json';
 
-function SidebarElement () {
-	const [collapsed, setCollapsed] = useState(false);
-
+function SidebarElement ({ collapsed, setCollapsed }) {
 	return (
 		<Sidebar 
 			collapsed={collapsed}
@@ -30,10 +28,11 @@ function SidebarElement () {
 			>
 				{Items.map((item) => (
 					<MenuItem
+						key={item.id}
 						icon={
 							<Icon />
 						}
-						component={ <Link to={item.link} />}
+						//component={ <Link to={item.link}/> }
 					> 
 					{item.title} 
 					</MenuItem>

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { createBrowserHistory as history} from 'history'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
-import { EvaIcons } from 'eva-icons'
+//import { EvaIcons } from 'eva-icons'
 
 //import * as io from 'socket.io-client'
 import store from '../assets/scripts/redux/store'
@@ -15,11 +15,10 @@ import '../assets/style/css/bootstrap.css';
 import '../assets/style/css/app.css'
 import '../assets/style/css/comps/menu.css'
 
-//import AppRoutes from '../means/router';
-import Layout from './components/Layout.jsx';
+import Routes from '../means/router/Routes.jsx';
 
 //Initialize Eva Icons
-EvaIcons.init();
+//EvaIcons.init();
 
 //Create Root
 const container = document.getElementById('root');
@@ -30,7 +29,7 @@ class App extends Component {
         return (
             <React.StrictMode>
                 <Provider store={store}> 
-                    <Layout />
+                    <Routes />
                 </Provider>
             </React.StrictMode>
     )}

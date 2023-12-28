@@ -1,9 +1,8 @@
 import React from 'react';
 
-export default function SectionBar () {
+export default function SectionBar ({ set, children }) {
 	return (
-		<div className="content">
-			{/* Content goes here */}
-			Content
+		<div className="content">			
+			{children}
 		</div>
 )}
