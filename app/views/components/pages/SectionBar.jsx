@@ -1,5 +1,5 @@
 import React from 'react';
-import Switch from '../menu/Switch';
+import Switch from '../menu/Switch.jsx';
 
 export default function SectionBar ({ set, children }) {
 	return (

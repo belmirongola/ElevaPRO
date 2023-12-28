@@ -12,7 +12,7 @@ import { Icon } from '@iconify/react'
 import Typography from '../default/Typography.jsx'
 import SidebarHeader from './SidebarHeader.jsx'
 import SidebarFooter from './SidebarFooter.jsx'
-import Badge from './Badge'
+import Badge from './Badge.jsx'
 
 import Items from './MenuItens.json'
 import { blue, grey } from '@material-ui/core/colors'
