@@ -8,7 +8,7 @@ import { Sidebar,
 		 MenuItemStyles
 		} from 'react-pro-sidebar'
 import { Link } from 'react-router-dom'
-import { Icon } from '@iconify/react'
+import { Icon } from '@iconify-icon/react'
 import Typography from '../default/Typography.jsx'
 import SidebarHeader from './SidebarHeader.jsx'
 import SidebarFooter from './SidebarFooter.jsx'
@@ -20,10 +20,14 @@ import { blue, grey } from '@material-ui/core/colors'
 const menuItemStyles = {
 	root: {
 		fontSize: '13px',
-		fontWeight: 400
+		fontWeight: 400,
+		borderRadius: '7px',
+		margin: '0px 0px 5% 5%',
+		width: '90%'
 	},
 	icon: {
 		color: blue,
+		fontSize: '16pt',
 		[`&.${menuClasses.disabled}`]: {
 			color: grey
 		}
@@ -34,16 +38,17 @@ const menuItemStyles = {
 	subMenuContent: ({ level }) => ({
 		backgroundColor:
 			level === 0
-				? 'red'
-				: 'transparent'
+				? '#121b2eff'
+				: 'transparent',
+		borderRadius: '5px'
 	}),
 	button: {
 		[`&.${menuClasses.disabled}`]: {
 			color: grey
 		},
 		'&:hover': {
-			backgroundColor: 'blue',
-			color: 'red'
+			backgroundColor: '#0023c4ff;',
+			color: '#fff'
 		}
 	},
 	label: ({ open }) => {
@@ -55,13 +60,23 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 	return (
 		<Sidebar 
 			collapsed={collapsed}
-			rootStyles={{ color: '#fff' }}
-			backgroundColor='#000'>
+			width="200px"
+			rootStyles={{ 
+				color: '#f4f4f4', 
+				margin:"1% 0 1% 1%",
+				borderRadius: '10px',
+				border: 'thin solid #fff',
+				[`&>div`]:{
+					borderRadius: '10px'
+				}
+			}}
+			backgroundColor='#000000ff'>
 			
 			<div style={{
 				display: 'flex',
 				flexDirection: 'column',
-				height: '100%'
+				height: '100%',
+				borderRadius: '30px',
 			}}>
 				<SidebarHeader
 					style={{
@@ -89,7 +104,7 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 					<Menu menuItemStyles={menuItemStyles}>
 						<SubMenu
 							label='Apps'
-							icon={ <Icon/> }
+							icon={ <Icon icon="fluent:apps-32-filled"/> }
 							suffix={
 								<Badge
 									variant='danger'

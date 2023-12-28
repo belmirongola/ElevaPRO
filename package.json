@@ -54,6 +54,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@babel/preset-env": "^7.23.6",
+    "@iconify-icon/react": "^1.0.8",
     "babel-loader": "^9.1.3"
   }
 }

@@ -1,6 +1,13 @@
 @charset "utf-8";
 @import url("http://127.0.0.1:91/modules/@flaticon/flaticon-uicons/css/all/all.css");
 
+:root {
+    --penn-blue: #040e47ff;
+    --black: #000000ff;
+    --prussian-blue: #1e293bff;
+    --oxford-blue: #121b2eff;
+    --medium-blue: #0023c4ff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +22,6 @@ body,
 }
 
 #app {
-    background-color: #fff;
     display: grid;
     grid-template-columns: 70px auto;
     grid-template-rows: 100%;
@@ -46,6 +52,8 @@ body {
 .dashboard {
   display: flex;
   height: 100vh;
+      background-color: #1e293bff;
+
 }
 
 .sidebar {
@@ -58,6 +66,5 @@ body {
 .content {
   flex: 1;
   padding: 20px;
-  background-color: #f4f4f4;
   overflow: auto;
 }
