@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import Typography from '../default/Typography.jsx'
+
 
 const StyledSidebarHeader = styled.div`
   height: 64px;
