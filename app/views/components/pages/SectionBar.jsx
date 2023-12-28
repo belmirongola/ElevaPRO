@@ -8,7 +8,7 @@ export default function SectionBar ({ set, children }) {
 				id="collapsed"
 				checked={true}
 				onchange={set}
-				label={Collapse}
+				label={"Collapse"}
 			/>			
 			{children}
 		</div>
