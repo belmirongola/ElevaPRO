@@ -6,7 +6,7 @@ import { Sidebar,
 		 sidebarClasses,
 		 menuClasses,
 		 MenuItemStyles
-		} from 'react-pro-sidebar'
+	   } from 'react-pro-sidebar'
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify-icon/react'
 import Typography from '../default/Typography.jsx'
@@ -19,35 +19,36 @@ import { blue, grey } from '@material-ui/core/colors'
 
 const menuItemStyles = {
 	root: {
-		fontSize: '13px',
+		fontSize: '12pt',
 		fontWeight: 400,
-		borderRadius: '7px',
+		borderRadius: '5px',
 		margin: '0px 0px 5% 5%',
 		width: '90%'
 	},
 	icon: {
-		color: blue,
-		fontSize: '16pt',
+		color: '#fff',
+		fontSize: '18pt',
 		[`&.${menuClasses.disabled}`]: {
 			color: grey
 		}
 	}, 
 	SubMenuExpandIcon: {
-		color: '#b6b7b9'
+		color: '#fff'
 	},
 	subMenuContent: ({ level }) => ({
 		backgroundColor:
 			level === 0
-				? '#121b2eff'
+				? '#fff'
 				: 'transparent',
 		borderRadius: '5px'
 	}),
 	button: {
+		borderRadius: '10px',
 		[`&.${menuClasses.disabled}`]: {
 			color: grey
 		},
 		'&:hover': {
-			backgroundColor: '#0023c4ff;',
+			backgroundColor: 'grey;',
 			color: '#fff'
 		}
 	},
@@ -60,7 +61,7 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 	return (
 		<Sidebar 
 			collapsed={collapsed}
-			width="200px"
+			width="230px"
 			rootStyles={{ 
 				color: '#f4f4f4', 
 				margin:"1% 0 1% 1%",
@@ -85,11 +86,11 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 
 				<div style={{ 
 					flex: 1,
-					marginBottom: '32px'
+					marginBottom: collapsed ? '0px' : '32px'
 					}}>
 					<div style={{
 						padding: '0 24px',
-						marginBottom: '8px'
+						marginBottom: collapsed ? '0px' : '8px'
 					}}>
 						<Typography
 							variant='body2'
@@ -97,24 +98,29 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 							style={{
 								opacity: collapsed ? 0 : 0.7,
 								letterSpacing: '0.5px'}}>
-							Geral
+							GERAL
 						</Typography>
+						<Divisor cl={collapsed}/>
 					</div>
 
 					<Menu menuItemStyles={menuItemStyles}>
-						<SubMenu
-							label='Apps'
+						<MenuItem
 							icon={ <Icon icon="fluent:apps-32-filled"/> }
 							suffix={
 								<Badge
 									variant='danger'
 									shape='circle'
 								>6</Badge>
-							}>
-							<MenuItem> Imagens</MenuItem>
-							<MenuItem> Texto </MenuItem>
-							<MenuItem> Documentos </MenuItem>
-						</SubMenu>
+							}> 
+							Imagens </MenuItem>
+
+						<MenuItem
+							icon={ <Icon icon="fluent:apps-32-filled"/> }
+						> Texto </MenuItem>
+
+						<MenuItem
+							icon={ <Icon icon="fluent:apps-32-filled"/> }
+						> Documentos </MenuItem>
 					</Menu>
 
 					<div
@@ -124,18 +130,20 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 							marginTop: '32px'}}>
 						<Typography
 							variant='body2'
-							fontWeight={600}
+							fontWeight={400}
 							style={{
 								opacity: collapsed ? 0 : 0.7,
 								letterSpacing: '0.5px'
 							}}>
-							Extra
+							EXTRA
 						</Typography>
+						<Divisor cl={collapsed}/>
 					</div>
 
 					<Menu menuItemStyles={menuItemStyles}>
 						<MenuItem
-							icon={ <Icon /> }
+							label={'ok'}
+							icon={ <Icon icon="fluent:apps-32-filled"/> }
 							suffix={
 								<Badge variant='success'>
 									New
@@ -151,4 +159,13 @@ function SidebarElement ({ collapsed, setCollapsed }) {
 		</Sidebar>
 )}
 
+const Divisor = ({ cl }) => {
+	return (
+		<hr style={{
+			opacity: cl ? 0.7 : 0,
+			color: 'grey',
+			transition: '0.3s'
+		}}/>
+	)
+}
 export default SidebarElement;

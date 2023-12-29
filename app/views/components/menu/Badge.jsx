@@ -7,9 +7,9 @@ const StyledBadge = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: ${({ shape }) => (shape === 'circle' ? '50%' : '16px')};
+  border-radius: ${({ shape }) => (shape === 'circle' ? '5px' : '5px')};
   padding: ${({ shape }) => (shape === 'circle' ? '0' : '0 6px')};
-  font-size: 11px;
+  font-size: 9pt;
   font-weight: 600;
 
   ${({ variant }) => {

@@ -8,6 +8,7 @@
     --oxford-blue: #121b2eff;
     --medium-blue: #0023c4ff;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -43,28 +44,25 @@ body,
     text-decoration: none;
 }
 
-/* styles.css */
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .dashboard {
-  display: flex;
-  height: 100vh;
-      background-color: #1e293bff;
-
+    display: flex;
+    height: 100vh;
 }
 
 .sidebar {
-  width: 200px;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
 }
 
 .content {
-  flex: 1;
-  padding: 20px;
-  overflow: auto;
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
 }

@@ -12,7 +12,7 @@ class Layout extends Component {
         this.utils = props.utils;
         this.state = {
             menu: {
-                collapsed: false,
+                collapsed: true,
                 setCollapsed: this.setCollapsed
             }
         }
