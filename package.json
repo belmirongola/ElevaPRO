@@ -38,6 +38,7 @@
     "ip": "^1.1.8",
     "json5": "^2.2.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "openai": "^4.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
