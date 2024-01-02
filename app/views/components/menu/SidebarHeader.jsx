@@ -3,15 +3,14 @@ import React from 'react';
 import Typography from '../default/Typography.jsx'
 
 const StyledSidebarHeader = styled.div`
-  height: 64px;
-  min-height: 64px;
+  height: 50px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0;
 
-  > div {
-    width: 100%;
-    overflow: hidden;
+  > img {
+    width: 40px;
+    height: 40px;
   }
 `;
 
@@ -32,22 +31,18 @@ const StyledLogo = styled.div`
   margin-right: 5px;
 `;
 
-const SidebarHeader = ({ children, ...rest }) => {
-  return (
-    <StyledSidebarHeader {...rest}>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <StyledLogo>E</StyledLogo>
-        <div>
-            <Typography 
-              variant="subtitle1" 
-              fontWeight={400} 
-              color="#fff">
-                ElevaPRO
-            </Typography>
-        </div>
-      </div>
-    </StyledSidebarHeader>
-  );
-};
-
+const SidebarHeader = ({ logo, name }) => {
+	return (
+		<StyledSidebarHeader>
+			<img src={logo} alt={name} />
+			<Typography
+        variant="subtitle1" 
+        fontWeight={400} 
+        color="#fff"
+      >
+				{name}
+			</Typography>
+		</StyledSidebarHeader>
+	)
+}
 export default SidebarHeader;
