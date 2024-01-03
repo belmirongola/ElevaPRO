@@ -11,26 +11,37 @@ import Items from './MenuItens.json'
 
 function SidebarElement ({ collapsed, setCollapsed }) {
 	return (
-		<div className='sidebar'>
-			<SidebarHeader name={'ElevaPRO'} logo={{}} />
+		<div className='sidebar'
+			style={{
+				width: collapsed? '60px': '200px',
+				transition: '0.3s'
+			}}
+		>
+			<SidebarHeader 
+				name={'ElevaPRO'} 
+				logo={{}} 
+				state={collapsed}/>
+				
 			<MenuBar>
 				<MenuItem 
 					title={'Images'}
 					icon={''}
-					state={collapsed}
-					/>
+					state={collapsed}/>
 
 				<MenuItem 
 					title={'Text'}
-					icon={''}/>
+					icon={''}
+					state={collapsed}/>
 
 				<MenuItem 
 					title={'Docs'}
-					icon={''}/>
+					icon={''}
+					state={collapsed}/>
 
 				<MenuItem 
 					title={'Apps'}
-					icon={''}/>
+					icon={''}
+					state={collapsed}/>
 			</MenuBar>
 		</div>
 )}

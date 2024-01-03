@@ -16,7 +16,6 @@ const StyledMenuItem = styled.li`
   flex-direction: row;
   align-items: center;
   margin: 10px;
-  background: grey;
   padding: 10px;
   border-radius: 7px;
 `
@@ -25,7 +24,6 @@ const StyledMenuIcon = styled.div`
   height: 20px;
   width: 20px;
   border-radius: 3px;
-  margin: 0 10px 0 0;
   background-color: #09f;
 `
 
@@ -42,24 +40,26 @@ export class MenuBar extends React.Component {
     return (
       <StyledMenuBar>
         <StyledMenuList>
-          {this.props.children}
+          { this.props.children }
         </StyledMenuList>
       </StyledMenuBar>
     )
   }
 }
 
-export const MenuItem = ({title, icon, link, state}) => {
+export const MenuItem = ({ title, icon, link, state }) => {
+
 	return (
 		<StyledMenuItem>
-      <MenuIcon icon={icon} />
+      <MenuIcon icon={ icon } />
 
       <Typography 
         style={{
-
+          display: state? 'none': '',
+          margin: state? '0': '0 0 0 10px'
         }}
       >
-        {title}
+        { title }
       </Typography>
 		</StyledMenuItem>
 	)
@@ -68,7 +68,7 @@ export const MenuItem = ({title, icon, link, state}) => {
 export const MenuIcon = ({ icon }) => {
   return (
     <StyledMenuIcon>
-      <Icon icon={icon}/>
+      <Icon icon={ icon }/>
     </StyledMenuIcon>
   )
 }

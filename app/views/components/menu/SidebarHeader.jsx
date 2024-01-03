@@ -11,38 +11,26 @@ const StyledSidebarHeader = styled.div`
   > img {
     width: 40px;
     height: 40px;
+    margin-top: 5%;
   }
 `;
 
-const StyledLogo = styled.div`
-  width: 35px;
-  min-width: 35px;
-  height: 35px;
-  min-height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
-  background-color: #009fdb;
-  background: grey;
-  margin-right: 5px;
-`;
-
-const SidebarHeader = ({ logo, name }) => {
+const SidebarHeader = ({ logo, name, state }) => {
 	return (
 		<StyledSidebarHeader>
-			<img src={logo} alt={name} />
+			<img src={ logo } alt={ name } />
 			<Typography
         variant="subtitle1" 
-        fontWeight={400} 
+        fontWeight={ 400 } 
         color="#fff"
-      >
-				{name}
+        style={{
+          display: state? 'none': ''
+        }}>
+        
+				{ name }
 			</Typography>
 		</StyledSidebarHeader>
-	)
+	);
 }
+
 export default SidebarHeader;
